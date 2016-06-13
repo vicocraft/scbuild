@@ -9,6 +9,19 @@ O arquivo .schematic deve ter o formato MCEdit/WorldEdit e deve estar **descompa
 
 O script foi desenvolvido originalmente por Orwell. Clique [aqui](http://www.computercraft.info/forums2/index.php?/topic/1949-turtle-schematic-file-builder/) para o tópico original no fórum do ComputerCraft (**inglês**).
 
+## À Fazer (Prioridade)
+
+* Adicionar suporte à blocos atuais (1.7+);
+
+## À Fazer (Secundário)
+
+* Adicionar script do Syli para conversão dos arquivos schematic descompactados pra texto (pra usar o pastebin);
+* Implementar GZIP (impossível pra mim?);
+
+## Já feito
+
+* Adicionado "suporte" à sementes pra assinalar ar e blocos indesejados (pra que nada seja colocado pela turtle);
+
 ## Instalação
 
 * [Instale o mod ComputerCraft](http://www.computercraft.info/download/) (consulte o link para informações);

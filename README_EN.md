@@ -8,6 +8,19 @@ This program takes a typical '.schematic' file as input, asks for all necessary 
 
 This script was originally developed by Orwell. Check [here](http://www.computercraft.info/forums2/index.php?/topic/1949-turtle-schematic-file-builder/) for the original topic on ComputerCraft forums!
 
+## TOP TODO
+
+* Add the data values for newer items;
+
+## TODO
+
+* Bundle Syli script to convert unzipped schematic files to plaintext (for pastebin use / servers);
+* Implement GZIP (impossible for me?);
+
+## Already Done:
+
+* Added "support" for add wheat seeds in a slot to assign air and another unwanted blocks (another items will make the turtle stop);
+
 ## Setup
 
 * [Install ComputerCraft](http://www.computercraft.info/download/) (more info on the link);
