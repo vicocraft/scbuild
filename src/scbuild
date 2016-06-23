@@ -490,7 +490,7 @@ function getBlockName(id, blockData)
         return str
       end
 	  -- Wool
-      if (id == 35) or (id == 171) then
+      if (id == 35 or id == 171) then
         str = woolColors[blockData] .. " " .. block_id[id]
         return str
       end
