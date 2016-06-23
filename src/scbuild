@@ -470,13 +470,27 @@ woolColors[13] = "Green"
 woolColors[14] = "Red"
 woolColors[15] = "Black"
 
+woodColors = {}
+woodColors[0] = "Oak"
+woodColors[1] = "Spruce"
+woodColors[2] = "Birch"
+woodColors[3] = "Jungle"
+woodColors[4] = "Acacia"
+woodColors[5] = "Dark Oak"
+
 function getBlockName(id, blockData)
   blockData = blockData or nil
   if(block_id[id] == nil) then
     return "UNKNOWN"
   else
     if(blockData) then
-      if(id == 35) then
+	  -- Wood
+      if(id == 5) then
+        str = woodColors[blockData] .. " " .. block_id[id]
+        return str
+      end
+	  -- Wool
+      if (id == 35) or (id == 171) then
         str = woolColors[blockData] .. " " .. block_id[id]
         return str
       end
