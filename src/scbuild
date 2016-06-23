@@ -478,6 +478,11 @@ woodColors[3] = "Jungle"
 woodColors[4] = "Acacia"
 woodColors[5] = "Dark Oak"
 
+sandstoneType = {}
+sandstoneType[0] = "Normal"
+sandstoneType[1] = "Chiseled"
+sandstoneType[2] = "Smooth"
+
 function getBlockName(id, blockData)
   blockData = blockData or nil
   if(block_id[id] == nil) then
@@ -489,9 +494,14 @@ function getBlockName(id, blockData)
         str = woodColors[blockData] .. " " .. block_id[id]
         return str
       end
-	  -- Wool
+	  -- Wool e Carpet
       if (id == 35 or id == 171) then
         str = woolColors[blockData] .. " " .. block_id[id]
+        return str
+      end
+	  -- (Red) Sandstone
+      if (id == 24 or id == 179) then
+        str = sandstoneType[blockData] .. " " .. block_id[id]
         return str
       end
     end
