@@ -39,7 +39,7 @@ block_id[11] = "Stationary lava"
 block_id[12] = "Sand"
 block_id[13] = "Gravel"
 block_id[14] = "Gold Ore"
-block_id[15] = "Iron (Ore)"
+block_id[15] = "Iron Ore"
 block_id[16] = "Coal Ore"
 block_id[17] = "Log"
 block_id[18] = "Leaves"
@@ -49,16 +49,16 @@ block_id[21] = "Lapis Lazuli (Ore)"
 block_id[22] = "Lapis Lazuli (Block)"
 block_id[23] = "Dispenser"
 block_id[24] = "Sandstone"
-block_id[25] = "Note Block Tile entity"
+block_id[25] = "Note Block"
 block_id[26] = "Bed"
-block_id[27] = "Powered Rail "
-block_id[28] = "Detector Rail "
+block_id[27] = "Powered Rail"
+block_id[28] = "Detector Rail"
 block_id[29] = "Sticky Piston"
 block_id[30] = "Cobweb"
 block_id[31] = "Tall Grass"
 block_id[32] = "Dead Bush"
 block_id[33] = "Piston"
-block_id[34] = "Piston Extension"
+block_id[34] = "Piston Head"
 block_id[35] = "Wool"
 block_id[36] = "Block moved by Piston"
 block_id[37] = "Dandelionandelion"
@@ -96,7 +96,7 @@ block_id[68] = "Wall Sign"
 block_id[69] = "Lever"
 block_id[70] = "Stone Pressure Plate"
 block_id[71] = "Iron Door"
-block_id[72] = "Wooden Pressure Plates"
+block_id[72] = "Wooden Pressure Plate"
 block_id[73] = "Redstone Ore"
 block_id[74] = "Glowing Redstone Ore"
 block_id[75] = "Redstone Torch"
@@ -308,8 +308,14 @@ function down()
 end
 
 function place()
-  while not turtle.placeDown() do
-    turtle.digDown()
+  iteminfo = turtle.getItemDetail()
+  if iteminfo then
+    if iteminfo.name ~= "minecraft:wheat_seeds" then
+      while not turtle.placeDown() do
+        turtle.digDown()
+      end
+      turtle.placeDown()
+    end
   end
 end
 
