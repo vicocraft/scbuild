@@ -1,3 +1,7 @@
+**ARQUIVADO**! O desenvolvimento foi movido para [este repositório único](https://github.com/vicocraft/vicocraft)!
+
+**ARCHIVED**! Developement was moved for [here](https://github.com/vicocraft/vicocraft)!
+
 # Schematic Builder para o ComputerCraft
 
 *English user? Check README_EN.md*
